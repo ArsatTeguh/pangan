@@ -45,9 +45,9 @@ export default function Home() {
       </div>
 
       {/* Jumbotron */}
-      <div className=" bg-wpigreen-50 xl:h-[820px] md:h-[1050px] h-[850px]">
+      <div className=" bg-wpigreen-50 xl:h-[820px] md:h-[1050px] h-[810px]">
         <div
-          className="bg-wpiblue-50 flex flex-col px-4 xl:px-36 xl:h-[600px] md:h-[950px] lg:h-[550px] h-[800px]"
+          className="bg-wpiblue-50 flex flex-col px-4 xl:px-36 xl:h-[600px] md:h-[950px] lg:h-[550px] h-[750px]"
           style={{ borderRadius: '0 0 50px 50px' }}
         >
           <div className="container mx-auto flex flex-col lg:flex-row lg:h-[500px]">
@@ -113,7 +113,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" h-[310px] md:h-[400px] lg:h-[33vw]  xl:h-full justify-center py-5 mt-4 lg:mt-0 md:py-0 items-center col-span-7 lg:-translate-x-4">
+            <div className=" h-[280px] md:h-[400px] lg:h-[33vw]  xl:h-full justify-center py-5 mt-4 lg:mt-0 md:py-0 items-center col-span-7 lg:-translate-x-4">
               <img
                 src="https://warungpangan.com/upload/settings/home_banner3.png"
                 alt="image1"
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
 
         {/* Carousel */}
-        <div className="container mx-auto lg:-translate-y-[7vw] xl:-translate-y-[7.5vw] md:-translate-y-32 -translate-y-28 xl:px-12 px-2 w-full h-[130px] md:h-[200px] lg:h-[17vw] xl:h-[300px]  sm:px-0 lg:px-2 ">
+        <div className="container mx-auto lg:-translate-y-[7vw] xl:-translate-y-[7.5vw] md:-translate-y-32 -translate-y-24 xl:px-12 px-2 w-full h-[130px] md:h-[200px] lg:h-[17vw] xl:h-[300px]  sm:px-0 lg:px-2 ">
           <MasterCarousel />
         </div>
 
