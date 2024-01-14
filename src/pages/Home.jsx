@@ -45,20 +45,12 @@ export default function Home() {
       </div>
 
       {/* Jumbotron */}
-      <div className=" bg-wpigreen-50 xl:h-[820px] md:h-[900px] h-[900px]">
+      <div className=" bg-wpigreen-50 xl:h-[820px] md:h-[900px] h-[850px]">
         <div
           className="bg-wpiblue-50 flex flex-col px-4 xl:px-36 xl:h-[600px] md:h-[760px] lg:h-[450px] h-[800px]"
           style={{ borderRadius: '0 0 50px 50px' }}
         >
-          <div className="container mx-auto flex flex-col lg:flex-row-reverse lg:h-[500px]">
-            <div className=" h-[50vh] lg:h-full justify-center py-5 md:py-0 items-center col-span-7 lg:-translate-x-4">
-              <img
-                src="https://warungpangan.com/upload/settings/home_banner3.png"
-                alt="image1"
-                className="h-full w-full  "
-                style={{ width: '100%', height: '100%' }}
-              />
-            </div>
+          <div className="container mx-auto flex flex-col lg:flex-row lg:h-[500px]">
             <div className="flex justify-center items-center text-white col-span-5 pl-0 pt-5 md:pt-8 lg:pt-0 lg:pl-6 ">
               <div className="flex flex-col md:flex-row lg:flex-col">
                 <div className="">
@@ -119,11 +111,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className=" h-[40vh] lg:h-full justify-center py-5 mt-4 lg:mt-0 md:py-0 items-center col-span-7 lg:-translate-x-4">
+              <img
+                src="https://warungpangan.com/upload/settings/home_banner3.png"
+                alt="image1"
+                className="h-full w-full  "
+                style={{ width: '100%', height: '100%' }}
+              />
+            </div>
           </div>
         </div>
 
         {/* Carousel */}
-        <div className="container mx-auto xl:-translate-y-32 lg:-translate-y-16 md:-translate-y-24 -translate-y-16 xl:px-12 px-2 w-full h-[130px] md:h-[200px] lg:h-[300px]  sm:px-0 lg:px-2 ">
+        <div className="container mx-auto xl:-translate-y-32 lg:-translate-y-16 md:-translate-y-24 -translate-y-28 xl:px-12 px-2 w-full h-[130px] md:h-[200px] lg:h-[300px]  sm:px-0 lg:px-2 ">
           <MasterCarousel />
         </div>
 
@@ -159,10 +159,10 @@ export default function Home() {
         {/* Content 2 */}
         <div className="container mx-auto grid xl:grid-cols-12 grid-cols-1 gap-6 px-4 lg:px-10 pt-6 lg:pt-0">
           <div className="lg:col-span-7 col-span-1 flex flex-col justify-start">
-            <div className="pb-8 lg:pb-0">
+            <div className="pb-5 lg:pb-0">
               <Typography
                 variant="h3"
-                className="text-xl md:text-[1.8rem] lg:text-[2rem] !leading-8 text-center md:text-start"
+                className="text-[1.6rem] pr-4 lg:pr-0 lg:text-[2rem] !leading-8 text-start"
                 style={{
                   fontFamily: "'M PLUS Rounded 1c', sans-serif",
                   fontWeight: 800,
@@ -171,14 +171,14 @@ export default function Home() {
                 Keunggulan Berbelanja di Aplikasi Warung Pangan
               </Typography>
             </div>
-            <div className="flex flex-col md:flex-row  py-4 gap-3 md:gap-6">
-              <span className="text-8xl lg:text-6xl flex items-center justify-center  md:h-full   ">
+            <div className="flex  py-4 gap-3 md:gap-6">
+              <span className="text-[3rem] lg:text-6xl flex   md:h-full   ">
                 <FcApproval />
               </span>
               <div>
                 <Typography
                   variant="lead"
-                  className="text-base lg:text-xl"
+                  className="text-[1.5rem] lg:pr-0 lg:text-[2rem] !leading-8 text-start"
                   style={{
                     fontFamily: "'M PLUS Rounded 1c', sans-serif",
                     fontWeight: 800,
@@ -193,14 +193,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row  py-4 gap-3 md:gap-6">
-              <span className="text-8xl lg:text-6xl flex items-center justify-center  md:h-full   ">
+            <div className="flex  py-4 gap-3 md:gap-6">
+              <span className="text-[3rem] lg:text-6xl flex   md:h-full   ">
                 <FcMultipleDevices />
               </span>
               <div>
                 <Typography
                   variant="lead"
-                  className="text-base lg:text-xl"
+                  className="text-[1.5rem] lg:pr-0 lg:text-[2rem] !leading-8 text-start"
                   style={{
                     fontFamily: "'M PLUS Rounded 1c', sans-serif",
                     fontWeight: 800,
@@ -215,14 +215,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row  py-4 gap-3 md:gap-6">
-              <span className="text-8xl lg:text-6xl flex items-center justify-center  md:h-full   ">
+            <div className="flex  py-4 gap-3 md:gap-6">
+              <span className="text-[3rem] lg:text-6xl flex   md:h-full   ">
                 <FcCustomerSupport />
               </span>
               <div>
                 <Typography
                   variant="lead"
-                  className="text-base lg:text-xl"
+                  className="text-[1.5rem] lg:pr-0 lg:text-[2rem] !leading-8 text-start"
                   style={{
                     fontFamily: "'M PLUS Rounded 1c', sans-serif",
                     fontWeight: 800,
@@ -242,7 +242,7 @@ export default function Home() {
           <div className=" lg:col-span-5 col-span-1 border shadow-lg flex justify-center rounded-md items-center">
             <img
               src="https://warungpangan.com/upload/settings/home_banner_keunggulan.png"
-              alt="image-2"
+              alt="image2"
               style={{ height: '500px' }}
             />
           </div>
