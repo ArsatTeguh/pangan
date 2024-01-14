@@ -111,7 +111,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" h-[40vh] lg:h-full justify-center py-5 mt-4 lg:mt-0 md:py-0 items-center col-span-7 lg:-translate-x-4">
+            <div className=" min-h-[310px] lg:h-full justify-center py-5 mt-4 lg:mt-0 md:py-0 items-center col-span-7 lg:-translate-x-4">
               <img
                 src="https://warungpangan.com/upload/settings/home_banner3.png"
                 alt="image1"
