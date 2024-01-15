@@ -78,7 +78,7 @@ export default function MitraPage() {
 
       {/* Content */}
       <div className="mx-2">
-        <div className="bg-white container mx-auto lg:-translate-y-[8.3rem] xl:-translate-y-[12rem] -translate-y-16 px-12 py-8 text-center shadow-lg rounded-lg">
+        <div className="bg-white container mx-auto lg:-translate-y-[8.3rem] xl:-translate-y-[7rem] -translate-y-16 px-12 py-8 text-center shadow-lg rounded-lg">
           <div className="text-wpiblue-50">
             <Typography
               variant="h2"
@@ -125,7 +125,7 @@ export default function MitraPage() {
       </div>
 
       {/* Form Supplier */}
-      <div className="container mx-auto lg:-translate-y-8 -translate-y-0">
+      <div className="container mx-auto lg:-translate-y-10 -translate-y-0">
         <div className="mb-10 border rounded-lg shadow-lg mx-2 lg:mx-0 ">
           <div className="flex xl:flex-row flex-col">
             <div
@@ -201,54 +201,57 @@ export default function MitraPage() {
       </div>
 
       {/* Content Image */}
-      <div class="container mx-auto flex justify-center pb-16 px-8">
-        <div class="overflow-hidden transform transition-transform duration-300 hover:scale-105">
-          <img
-            src="https://warungpangan.com/upload/settings/mb_banner_bottom.png"
-            alt=""
-            class="w-full"
-          />
+      <div className="container mx-auto flex justify-center pb-16 px-8">
+        <div className="overflow-hidden transform transition-transform duration-300 hover:scale-105">
+          <a href="/produk">
+            <img
+              src="https://warungpangan.com/upload/settings/mb_banner_bottom.png"
+              alt=""
+              className="w-full"
+            />
+          </a>
         </div>
       </div>
 
       {/* Form Email */}
       <div className="bg-blue-50 lg:px-28 px-0 h-[50px]">
-        <div className=" bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 px-4 mx-8 lg:mx-0 -translate-y-10">
-          <div className=" col-span-6 text-center flex items-center justify-center lg:justify-start">
-            <Typography
-              variant="h4"
-              style={{
-                fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                fontWeight: 700,
-              }}
-            >
-              Dapatkan info menarik dari kami!
-            </Typography>
-          </div>
-          <div className=" col-span-6">
-            <div className="flex gap-2">
-              <Input
-                size="lg"
-                placeholder="Email address"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900 "
-                labelProps={{
-                  className: 'before:content-none after:content-none w-full',
+          <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
+            <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
+              <Typography
+                variant="h4"
+                style={{
+                  fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                  fontWeight: 700,
                 }}
-              />
-              <Button className="hover:bg-green-400 bg-wpigreen-50">
-                Submit
-              </Button>
+              >
+                Masukkan alamat email Anda untuk mendapatkan informasi menarik
+                dari kami!
+              </Typography>
+            </div>
+            <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
+              <div className="flex gap-2 w-full">
+                <Input
+                  size="lg"
+                  placeholder="Email address"
+                  className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
+                  labelProps={{
+                    className: "before:content-none after:content-none w-full",
+                  }}
+                />
+                <Button className="hover:bg-green-400 bg-wpigreen-50">
+                  Submit
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <div className="bg-blue-50">
-        <div className="container mx-auto pt-20 lg:pt-8">
-          <MasterFooter />
+        {/* Footer */}
+        <div className="bg-blue-50">
+          <div className="container mx-auto pt-40 lg:pt-18">
+            <MasterFooter />
+          </div>
         </div>
       </div>
-    </div>
   );
 }
