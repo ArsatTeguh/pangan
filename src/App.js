@@ -32,6 +32,8 @@ import EditMasterProvince from "./pages/editMasterProvince";
 import AdminEditProfile from "./pages/AdminEditProfile";
 import AdminAddNews from "./pages/AdminAddNews";
 import Supplier from "./pages/Supplier";
+
+
 export default function App() {
   return (
     <Routes>

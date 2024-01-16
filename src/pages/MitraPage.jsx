@@ -3,6 +3,10 @@ import MasterNavbar from '../components/masterNavbar';
 import { Button, Input, Typography } from '@material-tailwind/react';
 import { FaArrowRight } from 'react-icons/fa';
 import MasterFooter from '../components/masterFooter';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 
 export default function MitraPage() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -82,44 +86,82 @@ export default function MitraPage() {
           <div className="text-wpiblue-50">
             <Typography
               variant="h2"
-              className="text-sm lg:text-4xl lg:pt-4 pt-0"
+              className="text-2xl lg:text-4xl lg:py-4 pb-6 md:pb-8 pt-0"
             >
               PARTNER KAMI
             </Typography>
           </div>
-          <div className="flex justify-center items-center">
-            <div className=" grid grid-cols-6  gap-10 items-center ">
-              <img
-                src="https://warungpangan.com/upload/img/c38c8d98c6cff3469702e63cbe56686d.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-              <img
-                src="https://www.ptppi.co.id/wp-content/uploads/2022/01/PPI-ID-Food.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-              <img
-                src="https://www.bgrlogistik.id/bgr/img/logo_bli.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-              <img
-                src="https://warungpangan.com/upload/img/mitra_bisnis_logo_2.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-              <img
-                src="https://warungpangan.com/upload/img/mitra_bisnis_logo_5.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-              <img
-                src="https://warungpangan.com/upload/img/mitra_bisnis_logo_3.png"
-                alt=""
-                style={{ maxWidth: '100%' }}
-              />
-            </div>
+          <div className="w-full h-full relative">
+            <Swiper
+              slidesPerView={5}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              loop={true}
+              breakpoints={{
+                340: {
+                  slidesPerView: 1,
+                  spaceBetween: 0,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 50,
+                },
+              }}
+            >
+              <SwiperSlide>
+                <img
+                  src="https://warungpangan.com/upload/img/c38c8d98c6cff3469702e63cbe56686d.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://www.ptppi.co.id/wp-content/uploads/2022/01/PPI-ID-Food.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto "
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://www.bgrlogistik.id/bgr/img/logo_bli.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto "
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://warungpangan.com/upload/img/mitra_bisnis_logo_2.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto "
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://warungpangan.com/upload/img/mitra_bisnis_logo_5.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto "
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://warungpangan.com/upload/img/mitra_bisnis_logo_3.png"
+                  alt=""
+                  className="w-[300px] h-[150px] md:w-[130px] md:h-[70px] xl:w-[200px] xl:h-[100px] mx-auto"
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>
@@ -215,43 +257,43 @@ export default function MitraPage() {
 
       {/* Form Email */}
       <div className="bg-blue-50 lg:px-28 px-0 h-[50px]">
-          <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
-            <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
-              <Typography
-                variant="h4"
-                style={{
-                  fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                  fontWeight: 700,
-                }}
-              >
-                Masukkan alamat email Anda untuk mendapatkan informasi menarik
-                dari kami!
-              </Typography>
-            </div>
-            <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
-              <div className="flex gap-2 w-full">
-                <Input
-                  size="lg"
-                  placeholder="Email address"
-                  className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
-                  labelProps={{
-                    className: "before:content-none after:content-none w-full",
-                  }}
-                />
-                <Button className="hover:bg-green-400 bg-wpigreen-50">
-                  Submit
-                </Button>
-              </div>
-            </div>
+        <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
+          <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
+            <Typography
+              variant="h4"
+              style={{
+                fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                fontWeight: 700,
+              }}
+            >
+              Masukkan alamat email Anda untuk mendapatkan informasi menarik
+              dari kami!
+            </Typography>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="bg-blue-50">
-          <div className="container mx-auto pt-40 lg:pt-18">
-            <MasterFooter />
+          <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
+            <div className="flex gap-2 w-full">
+              <Input
+                size="lg"
+                placeholder="Email address"
+                className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: 'before:content-none after:content-none w-full',
+                }}
+              />
+              <Button className="hover:bg-green-400 bg-wpigreen-50">
+                Submit
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <div className="bg-blue-50">
+        <div className="container mx-auto pt-40 lg:pt-18">
+          <MasterFooter />
+        </div>
+      </div>
+    </div>
   );
 }
