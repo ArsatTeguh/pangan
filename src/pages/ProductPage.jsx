@@ -63,8 +63,8 @@ export default function ProductPage() {
       {/* Kategori Produk */}
       <div
         className="container max-w-[1260px] mx-auto md:py-0 md:px-6 xl:px-0 
-     md:items-center md:justify-left justify-center  mt-4"
-      >
+        md:items-center md:justify-left justify-center  mt-4"
+          >
         <Typography
           style={{
             fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -286,7 +286,7 @@ export default function ProductPage() {
               />
               <button
                 type="button"
-                className="bg-wpigreen-50 text-white font-bold py-2 lg-4 h-10 rounded-r-md"
+                className="bg-wpigreen-50 text-white font-bold py-2 lg-4 h-10 rounded-r-md px-4 "
               >
                 <FaMagnifyingGlass />
               </button>
