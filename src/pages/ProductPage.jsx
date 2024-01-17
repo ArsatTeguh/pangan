@@ -62,7 +62,7 @@ export default function ProductPage() {
 
       {/* Kategori Produk */}
       <div
-        className="container max-w-[1260px]   mx-auto md:py-0 md:px-6 xl:px-6 
+        className="container max-w-[1260px] mx-auto md:py-0 md:px-6 xl:px-6 
       mt-4"
       >
         <Typography
@@ -76,7 +76,7 @@ export default function ProductPage() {
           Kategori Produk
         </Typography>
         <Swiper
-          className="mb-4  rounded-md"
+          className="mb-4  rounded-md  "
           slidesPerView={5}
           spaceBetween={5}
           pagination={{
@@ -106,27 +106,27 @@ export default function ProductPage() {
               spaceBetween: 5,
             },
             960: {
-              slidesPerView: 4,
+              slidesPerView: 5,
               spaceBetween: 0,
             },
 
             1238: {
-              slidesPerView: 5,
+              slidesPerView: 6,
               spaceBetween: 5,
             },
           }}
         >
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 w-full flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="w-full flex items-center justify-start">
                   <img
                     src="assets/coal.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -142,15 +142,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/corn.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -166,15 +166,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/agriculture.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -190,15 +190,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/aquaculture.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -214,15 +214,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/mineral.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -238,15 +238,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/agriculture.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-center">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -262,15 +262,15 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[193px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="flex items-center justify-start">
                   <img
                     src="assets/agriculture.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-0 mb-4 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-center">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -321,7 +321,7 @@ export default function ProductPage() {
           </div>
         </div>
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-          <div className="md:col-span-1  md:ml-7 px-8 md:px-0">
+          <div className="md: md:ml-7 px-8 md:px-0">
             <div>
               <MasterFilterCard />
             </div>
@@ -340,7 +340,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center  translate-x-[0%] xl:translate-x-[20%] mt-6">
+        <div className="flex justify-center items-center  mt-6">
           <MasterPagination />
         </div>
       </div>
