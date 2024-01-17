@@ -228,12 +228,12 @@ export default function MasterFilterCard() {
             </ListItem>
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-svelte"
+                htmlFor="vertical-list-svelte-1"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-svelte"
+                    id="vertical-list-svelte-1"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -255,12 +255,12 @@ export default function MasterFilterCard() {
             </ListItem>
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-svelte"
+                htmlFor="vertical-list-svelte-2"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-svelte"
+                    id="vertical-list-svelte-2"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{

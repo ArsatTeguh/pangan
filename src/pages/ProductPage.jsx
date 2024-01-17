@@ -62,8 +62,8 @@ export default function ProductPage() {
 
       {/* Kategori Produk */}
       <div
-        className="container max-w-[1260px] mx-auto md:py-0 md:px-6 xl:px-0 
-     md:items-center md:justify-left justify-center  mt-4"
+        className="container max-w-[1260px]   mx-auto md:py-0 md:px-6 xl:px-6 
+      mt-4"
       >
         <Typography
           style={{
@@ -71,12 +71,12 @@ export default function ProductPage() {
             fontWeight: 800,
           }}
           variant="h3"
-          className="text-center md:text-left justify-center pb-6 lg:pb-3 "
+          className="text-center  md:text-start justify-center pb-6 lg:pb-3 "
         >
           Kategori Produk
         </Typography>
         <Swiper
-          className="mb-4"
+          className="mb-4  rounded-md"
           slidesPerView={5}
           spaceBetween={5}
           pagination={{
@@ -93,11 +93,24 @@ export default function ProductPage() {
               slidesPerView: 1,
               spaceBetween: 0,
             },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            722: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
             768: {
               slidesPerView: 3,
               spaceBetween: 5,
             },
-            1024: {
+            960: {
+              slidesPerView: 4,
+              spaceBetween: 0,
+            },
+
+            1238: {
               slidesPerView: 5,
               spaceBetween: 5,
             },
@@ -105,7 +118,7 @@ export default function ProductPage() {
         >
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 w-full flex items-center justify-center">
                   <img
                     src="assets/coal.png"
@@ -129,7 +142,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-start">
                   <img
                     src="assets/corn.png"
@@ -153,7 +166,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-start">
                   <img
                     src="assets/agriculture.png"
@@ -177,7 +190,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-start">
                   <img
                     src="assets/aquaculture.png"
@@ -201,7 +214,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-start">
                   <img
                     src="assets/mineral.png"
@@ -225,7 +238,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-center">
                   <img
                     src="assets/agriculture.png"
@@ -249,7 +262,7 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[220px] xl:w-[232px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-center">
                   <img
                     src="assets/agriculture.png"
