@@ -62,7 +62,7 @@ export default function ProductPage() {
 
       {/* Kategori Produk */}
       <div
-        className="container max-w-[1260px]   mx-auto md:py-0 md:px-6 xl:px-6 
+        className="container max-w-[1260px]   mx-auto md:py-0 md:px-6 lg:px-0 
       mt-4"
       >
         <Typography
