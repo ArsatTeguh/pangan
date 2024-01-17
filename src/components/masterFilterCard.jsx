@@ -285,10 +285,7 @@ export default function MasterFilterCard() {
       </Accordion>
 
       {/* Section 3 */}
-      <Accordion
-        open={section3Expanded}
-        icon={<AccordionIcon open={section3Expanded} />}
-      >
+      <Accordion open={section3Expanded} icon={<AccordionIcon open={section3Expanded} />}>
         <AccordionHeader onClick={toggleSection3}>
           <Typography
             style={{
@@ -302,25 +299,36 @@ export default function MasterFilterCard() {
           </Typography>
         </AccordionHeader>
         <AccordionBody>
-          <div className="w-full mb-10 flex flex-col gap-2">
-            <label htmlFor="" className="font-semibold text-black">
-              Terendah
-            </label>
-            <Input value={`Rp. ${terendah}.000`} />
-            <span className="px-1">
-              <Slider defaultValue={0} value={terendah} onChange={onTerendah} />
-            </span>
-          </div>
+          {/* Tertinggi */}
           <div className="w-full mb-10 flex flex-col gap-2">
             <label htmlFor="" className="font-semibold text-black">
               Tertinggi
             </label>
-            <Input value={`Rp. ${tertinggi * 2}.000`} />
+            <Input value={`Rp. ${tertinggi.toLocaleString()}`} />
             <span className="px-1">
               <Slider
                 defaultValue={0}
                 value={tertinggi}
                 onChange={onTertinggi}
+                max={100000000}
+                step={100000}
+              />
+            </span>
+          </div>
+
+          {/* Terendah */}
+          <div className="w-full mb-10 flex flex-col gap-2">
+            <label htmlFor="" className="font-semibold text-black">
+              Terendah
+            </label>
+            <Input value={`Rp. ${terendah.toLocaleString()}`} />
+            <span className="px-1">
+              <Slider
+                defaultValue={0}
+                value={terendah}
+                onChange={onTerendah}
+                max={100000000}
+                step={100000}
               />
             </span>
           </div>

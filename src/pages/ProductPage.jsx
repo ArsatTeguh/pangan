@@ -105,108 +105,12 @@ export default function ProductPage() {
         >
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 w-full flex items-center justify-center">
-                  <img
-                    src="assets/coal.png"
-                    alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
-                  />
-                </div>
-                <div className="col-span-1 flex items-center justify-start">
-                  <Typography
-                    style={{
-                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                      fontWeight: 400,
-                    }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
-                  >
-                    Batubara
-                  </Typography>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
-                  <img
-                    src="assets/corn.png"
-                    alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
-                  />
-                </div>
-                <div className="col-span-1 flex items-center justify-start">
-                  <Typography
-                    style={{
-                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                      fontWeight: 400,
-                    }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
-                  >
-                    Horticultural
-                  </Typography>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
-                  <img
-                    src="assets/agriculture.png"
-                    alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
-                  />
-                </div>
-                <div className="col-span-1 flex items-center justify-start">
-                  <Typography
-                    style={{
-                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                      fontWeight: 400,
-                    }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
-                  >
-                    Agriculture
-                  </Typography>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
-                  <img
-                    src="assets/aquaculture.png"
-                    alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
-                  />
-                </div>
-                <div className="col-span-1 flex items-center justify-start">
-                  <Typography
-                    style={{
-                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                      fontWeight: 400,
-                    }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
-                  >
-                    Aquaculture
-                  </Typography>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
                   <img
                     src="assets/mineral.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-start">
@@ -215,7 +119,7 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
                   >
                     Mineral
                   </Typography>
@@ -225,21 +129,69 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
+                <div className="col-span-1 flex items-center justify-start">
                   <img
-                    src="assets/agriculture.png"
+                    src="assets/coal.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-center">
+                <div className="col-span-1 flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                  >
+                    Batubara
+                  </Typography>
+                </div>
+              </div>
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="#">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
+                <div className="col-span-1 flex items-center justify-start">
+                  <img
+                    src="assets/corn.png"
+                    alt=""
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                  />
+                </div>
+                <div className="col-span-1 flex items-center justify-start">
+                  <Typography
+                    style={{
+                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                      fontWeight: 400,
+                    }}
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                  >
+                    Horticurtular
+                  </Typography>
+                </div>
+              </div>
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="#">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
+                <div className="col-span-1 flex items-center justify-start">
+                  <img
+                    src="assets/Agriculture.png"
+                    alt=""
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                  />
+                </div>
+                <div className="col-span-1 flex items-center justify-start">
+                  <Typography
+                    style={{
+                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                      fontWeight: 400,
+                    }}
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
                   >
                     Agriculture
                   </Typography>
@@ -249,12 +201,36 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[250px] md:w-[230px] xl:w-[245px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 grid grid-cols-2 overflow-hidden text-center">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
+                <div className="col-span-1 flex items-center justify-start">
+                  <img
+                    src="assets/aquaculture.png"
+                    alt=""
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                  />
+                </div>
+                <div className="col-span-1 flex items-center justify-start">
+                  <Typography
+                    style={{
+                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                      fontWeight: 400,
+                    }}
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                  >
+                    Aquaculture
+                  </Typography>
+                </div>
+              </div>
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="#">
+              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
                 <div className="col-span-1 flex items-center justify-center">
                   <img
-                    src="assets/agriculture.png"
+                    src="assets/semua-kategori.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-center">
@@ -263,9 +239,9 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-lg md:text-base lg:text-base"
+                    className="text-white font-bold text-md md:text-sm lg:text-sm"
                   >
-                    Agriculture
+                    Semua Kategori
                   </Typography>
                 </div>
               </div>
