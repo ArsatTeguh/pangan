@@ -23,7 +23,41 @@ export default function MasterFilterCard() {
   const [section2Expanded, setSection2Expanded] = useState(false);
   const [section3Expanded, setSection3Expanded] = useState(false);
   const [provinsi, setProvinsi] = useState('Pilih Provinsi');
-  const [kota, setKota] = useState('Pilih Kabupaten/kota');
+  const [kota, setKota] = useState('Pilih Kabupaten/Kota');
+
+  const provinsiData = [
+    {
+      nama: 'Kalimantan Barat',
+      kota: ['Pontianak', 'Singkawang'],
+    },
+    {
+      nama: 'Jawa Barat',
+      kota: ['Bandung', 'Bogor', 'Depok'],
+    },
+    {
+      nama: 'Jawa Tengah',
+      kota: ['Semarang', 'Solo', 'Surakarta'],
+    },
+  ];
+
+  const handleProvinsiChange = (e) => {
+    const selectedProvinsi = e.target.value;
+    setProvinsi(selectedProvinsi);
+    // Cari kota yang sesuai dengan provinsi yang dipilih
+    const selectedProvinsiData = provinsiData.find(
+      (provinsi) => provinsi.nama === selectedProvinsi
+    );
+    if (selectedProvinsiData) {
+      // Set kota pertama dari provinsi yang dipilih
+      setKota(selectedProvinsiData.kota[0]);
+    } else {
+      setKota('Pilih Kabupaten/Kota');
+    }
+  };
+
+  const handleKotaChange = (e) => {
+    setKota(e.target.value);
+  };
 
   const [terendah, setTerendah] = useState(0);
   const [tertinggi, setTertinggi] = useState(0);
@@ -45,86 +79,64 @@ export default function MasterFilterCard() {
   return (
     <Card className="xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
       {/* Section 1 */}
-      <Accordion
-        className=""
-        open={section1Expanded}
-        icon={<AccordionIcon open={section1Expanded} />}
-      >
-        <AccordionHeader onClick={toggleSection1}>
-          <Typography
-            style={{
-              fontFamily: "'M PLUS Rounded 1c', sans-serif",
-              fontWeight: 800,
-            }}
-            color={section1Expanded ? 'green' : 'black'}
-            className="text-left uppercase font-semibold"
-          >
-            Lokasi
-          </Typography>
-        </AccordionHeader>
-        <AccordionBody className="w-full">
-          <div className="flex w-full h-full flex-col gap-6 relative">
-            <div className="relative">
-              <select
-                name="kota"
-                className="w-full py-3 rounded-md border-[1px] border-black/25 px-2 appearance-none "
-                id="kota"
-                value={provinsi}
-                onChange={(e) => setProvinsi(e.target.value)}
-              >
-                <option disabled>Pilih Provinsi</option>
-                <option value="Material Tailwind HTML">
-                  Material Tailwind HTML
-                </option>
-                <option value="Material Tailwind React">
-                  Material Tailwind React
-                </option>
-                <option value="Material Tailwind Vue">
-                  Material Tailwind Vue
-                </option>
-                <option value="Material Tailwind Angular">
-                  Material Tailwind Angular
-                </option>
-                <option value="Material Tailwind Svelte">
-                  Material Tailwind Svelte
-                </option>
-              </select>
-              <span className="absolute top-[1.1rem] right-2">
-                <FaAngleDown />
-              </span>
-            </div>
-            <div className="relative">
-              <select
-                name="kota"
-                className="w-full py-3 rounded-md border-[1px] border-black/25 px-2 appearance-none "
-                id="kota"
-                value={kota}
-                onChange={(e) => setKota(e.target.value)}
-              >
-                <option disabled>Pilih Kabupaten/kota</option>
-                <option value="Material Tailwind HTML">
-                  Material Tailwind HTML
-                </option>
-                <option value="Material Tailwind React">
-                  Material Tailwind React
-                </option>
-                <option value="Material Tailwind Vue">
-                  Material Tailwind Vue
-                </option>
-                <option value="Material Tailwind Angular">
-                  Material Tailwind Angular
-                </option>
-                <option value="Material Tailwind Svelte">
-                  Material Tailwind Svelte
-                </option>
-              </select>
-              <span className="absolute top-[1.1rem] right-2">
-                <FaAngleDown />
-              </span>
-            </div>
-          </div>
-        </AccordionBody>
-      </Accordion>
+      <Accordion open={section1Expanded}>
+  <AccordionHeader onClick={toggleSection1}>
+    <Typography
+      style={{
+        fontFamily: "'M PLUS Rounded 1c', sans-serif",
+        fontWeight: 800,
+      }}
+      color={section1Expanded ? 'green' : 'black'}
+      className="text-left uppercase font-semibold"
+    >
+      Lokasi
+    </Typography>
+  </AccordionHeader>
+  <AccordionBody className="w-full">
+    <div className="flex w-full h-full flex-col gap-6 relative">
+      <div className="relative">
+        <select
+          name="provinsi"
+          className="w-full py-3 rounded-md border-[1px] border-black/25 px-2 appearance-none "
+          id="provinsi"
+          value={provinsi}
+          onChange={handleProvinsiChange}
+        >
+          <option disabled>Pilih Provinsi</option>
+          {provinsiData.map((provinsiItem) => (
+            <option key={provinsiItem.nama} value={provinsiItem.nama}>
+              {provinsiItem.nama}
+            </option>
+          ))}
+        </select>
+        <span className="absolute top-[1.1rem] right-2">
+          <FaAngleDown />
+        </span>
+      </div>
+      <div className="relative">
+        <select
+          name="kota"
+          className="w-full py-3 rounded-md border-[1px] border-black/25 px-2 appearance-none "
+          id="kota"
+          value={kota}
+          onChange={handleKotaChange}
+        >
+          <option disabled>Pilih Kabupaten/Kota</option>
+          {provinsiData
+            .find((provinsiItem) => provinsiItem.nama === provinsi)
+            ?.kota.map((kotaItem) => (
+              <option key={kotaItem} value={kotaItem}>
+                {kotaItem}
+              </option>
+            ))}
+        </select>
+        <span className="absolute top-[1.1rem] right-2">
+          <FaAngleDown />
+        </span>
+      </div>
+    </div>
+  </AccordionBody>
+</Accordion>
 
       {/* Section 2 */}
       <Accordion
@@ -147,12 +159,12 @@ export default function MasterFilterCard() {
           <List>
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-react"
+                htmlFor="vertical-list-batubara"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-react"
+                    id="vertical-list-batubara"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -172,14 +184,15 @@ export default function MasterFilterCard() {
                 </Typography>
               </label>
             </ListItem>
+
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-vue"
+                htmlFor="vertical-list-horticultural"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-vue"
+                    id="vertical-list-horticultural"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -199,14 +212,15 @@ export default function MasterFilterCard() {
                 </Typography>
               </label>
             </ListItem>
+
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-svelte"
+                htmlFor="vertical-list-agriculture"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-svelte"
+                    id="vertical-list-agriculture"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -226,14 +240,15 @@ export default function MasterFilterCard() {
                 </Typography>
               </label>
             </ListItem>
+
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-svelte"
+                htmlFor="vertical-list-aquaculture"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-svelte"
+                    id="vertical-list-aquaculture"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -253,14 +268,15 @@ export default function MasterFilterCard() {
                 </Typography>
               </label>
             </ListItem>
+
             <ListItem className="p-0">
               <label
-                htmlFor="vertical-list-svelte"
+                htmlFor="vertical-list-mineral"
                 className="flex w-full cursor-pointer items-center px-3 py-2"
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
-                    id="vertical-list-svelte"
+                    id="vertical-list-mineral"
                     ripple={false}
                     className="hover:before:opacity-0"
                     containerProps={{
@@ -280,6 +296,7 @@ export default function MasterFilterCard() {
                 </Typography>
               </label>
             </ListItem>
+
           </List>
         </AccordionBody>
       </Accordion>
