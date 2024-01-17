@@ -3,10 +3,10 @@ import MasterNavbar from '../components/masterNavbar';
 import { Button, Input, Typography } from '@material-tailwind/react';
 import { FaArrowRight } from 'react-icons/fa';
 import MasterFooter from '../components/masterFooter';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay } from 'swiper/modules';
 
 export default function MitraPage() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -177,7 +177,6 @@ export default function MitraPage() {
               <Typography variant="h1" color="white">
                 Formulir Pendaftaran Supplier
               </Typography>
-              {/* BINGUNG ISI APA */}
             </div>
             <div className=" flex justify-center items-center xl:w-1/2 w-full">
               <form className=" py-6 mt-8 mb-2 max-w-screen-lg sm:w-96 w-full px-2">
@@ -257,43 +256,43 @@ export default function MitraPage() {
 
       {/* Form Email */}
       <div className="bg-blue-50 lg:px-28 px-0 h-[50px]">
-        <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
-          <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
-            <Typography
-              variant="h4"
-              style={{
-                fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                fontWeight: 700,
-              }}
-            >
-              Masukkan alamat email Anda untuk mendapatkan informasi menarik
-              dari kami!
-            </Typography>
-          </div>
-          <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
-            <div className="flex gap-2 w-full">
-              <Input
-                size="lg"
-                placeholder="Email address"
-                className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: 'before:content-none after:content-none w-full',
+          <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
+            <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
+              <Typography
+                variant="h4"
+                style={{
+                  fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                  fontWeight: 700,
                 }}
-              />
-              <Button className="hover:bg-green-400 bg-wpigreen-50">
-                Submit
-              </Button>
+              >
+                Masukkan alamat email Anda untuk mendapatkan informasi menarik
+                dari kami!
+              </Typography>
+            </div>
+            <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
+              <div className="flex gap-2 w-full">
+                <Input
+                  size="lg"
+                  placeholder="Email address"
+                  className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
+                  labelProps={{
+                    className: "before:content-none after:content-none w-full",
+                  }}
+                />
+                <Button className="hover:bg-green-400 bg-wpigreen-50">
+                  Submit
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <div className="bg-blue-50">
-        <div className="container mx-auto pt-40 lg:pt-18">
-          <MasterFooter />
+        {/* Footer */}
+        <div className="bg-blue-50">
+          <div className="container mx-auto pt-40 lg:pt-18">
+            <MasterFooter />
+          </div>
         </div>
       </div>
-    </div>
   );
 }
