@@ -5,8 +5,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import MasterFooter from '../components/masterFooter';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 export default function MitraPage() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -37,7 +35,7 @@ export default function MitraPage() {
 
       {/* Jumbotron */}
       <div
-        className="bg-wpiblue-50 xl:h-[675px] lg:h-[540px] h-[890px] lg:pt-4 pt-0"
+        className="bg-wpiblue-50 xl:h-[675px] lg:h-[540px] h-[950px] md:h-[1000px] lg:pt-4 pt-0"
         style={{ borderRadius: '0 0 50px 50px' }}
       >
         <div className="container mx-auto grid lg:grid-cols-12 grid-cols-1 px-4 ">
@@ -82,7 +80,7 @@ export default function MitraPage() {
 
       {/* Content */}
       <div className="mx-2">
-        <div className="bg-white container mx-auto lg:-translate-y-[8.3rem] xl:-translate-y-[7rem] -translate-y-16 px-12 py-8 text-center shadow-lg rounded-lg">
+        <div className="bg-white container mx-auto md:-translate-y-[2.5rem] lg:-translate-y-[8.3rem] xl:-translate-y-[7rem] -translate-y-16 px-12 py-8 text-center shadow-lg rounded-lg">
           <div className="text-wpiblue-50">
             <Typography
               variant="h2"
@@ -256,43 +254,43 @@ export default function MitraPage() {
 
       {/* Form Email */}
       <div className="bg-blue-50 lg:px-28 px-0 h-[50px]">
-          <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
-            <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
-              <Typography
-                variant="h4"
-                style={{
-                  fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                  fontWeight: 700,
-                }}
-              >
-                Masukkan alamat email Anda untuk mendapatkan informasi menarik
-                dari kami!
-              </Typography>
-            </div>
-            <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
-              <div className="flex gap-2 w-full">
-                <Input
-                  size="lg"
-                  placeholder="Email address"
-                  className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
-                  labelProps={{
-                    className: "before:content-none after:content-none w-full",
-                  }}
-                />
-                <Button className="hover:bg-green-400 bg-wpigreen-50">
-                  Submit
-                </Button>
-              </div>
-            </div>
+        <div className="bg-white grid grid-cols-1 lg:grid-cols-12 border rounded-lg shadow-lg py-8 -translate-y-10">
+          <div className="col-span-6 text-center flex items-center justify-center lg:justify-start px-auto md:px-0 xl:px-2">
+            <Typography
+              variant="h4"
+              style={{
+                fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                fontWeight: 700,
+              }}
+            >
+              Masukkan alamat email Anda untuk mendapatkan informasi menarik
+              dari kami!
+            </Typography>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="bg-blue-50">
-          <div className="container mx-auto pt-40 lg:pt-18">
-            <MasterFooter />
+          <div className="col-span-6 px-2 md:px-4 xl:px-2 flex items-center justify-center w-full">
+            <div className="flex gap-2 w-full">
+              <Input
+                size="lg"
+                placeholder="Email address"
+                className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: 'before:content-none after:content-none w-full',
+                }}
+              />
+              <Button className="hover:bg-green-400 bg-wpigreen-50">
+                Submit
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <div className="bg-blue-50">
+        <div className="container mx-auto pt-40 lg:pt-18">
+          <MasterFooter />
+        </div>
+      </div>
+    </div>
   );
 }
