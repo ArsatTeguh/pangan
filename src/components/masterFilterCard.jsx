@@ -40,6 +40,8 @@ export default function MasterFilterCard() {
     setTertinggi(Math.floor(Number(value)));
   };
 
+  //return as JSX
+
   return (
     <Card className="xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
       {/* Section 1 */}
