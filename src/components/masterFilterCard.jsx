@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-import { Select, Option, Input } from '@material-tailwind/react';
-import { Slider } from '@material-tailwind/react';
 import {
   Accordion,
-  AccordionHeader,
   AccordionBody,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
+  AccordionHeader,
   Button,
+  Card,
+  CardFooter,
   Checkbox,
+  Input,
   List,
   ListItem,
   ListItemPrefix,
+  Slider,
+  Typography,
 } from '@material-tailwind/react';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
+import React, { useState } from 'react';
+import { FaAngleDown } from 'react-icons/fa6';
 
 export default function MasterFilterCard() {
   const [section1Expanded, setSection1Expanded] = useState(false);
