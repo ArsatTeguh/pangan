@@ -219,7 +219,7 @@ export default function ProductPage() {
                   <img
                     src="assets/agriculture.png"
                     alt=""
-                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
+                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="flex items-center justify-start">
