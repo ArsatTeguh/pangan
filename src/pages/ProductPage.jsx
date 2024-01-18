@@ -62,21 +62,21 @@ export default function ProductPage() {
 
       {/* Kategori Produk */}
       <div
-        className="container max-w-[1260px] mx-auto md:py-0 md:px-6 xl:px-0 
-        md:items-center md:justify-left justify-center  mt-4"
-          >
+        className="container max-w-[1260px]  product mx-auto md:py-0 md:px-6 
+      mt-4"
+      >
         <Typography
           style={{
             fontFamily: "'M PLUS Rounded 1c', sans-serif",
             fontWeight: 800,
           }}
           variant="h3"
-          className="text-center md:text-left justify-center pb-6 lg:pb-3 "
+          className="text-center  md:text-start justify-center pb-6 lg:pb-3 "
         >
           Kategori Produk
         </Typography>
         <Swiper
-          className="mb-4"
+          className="mb-4  rounded-md"
           slidesPerView={5}
           spaceBetween={5}
           pagination={{
@@ -93,24 +93,37 @@ export default function ProductPage() {
               slidesPerView: 1,
               spaceBetween: 0,
             },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            722: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
             768: {
               slidesPerView: 3,
               spaceBetween: 5,
             },
-            1024: {
+            960: {
               slidesPerView: 5,
-              spaceBetween: 5,
+              spaceBetween: 0,
+            },
+
+            1238: {
+              slidesPerView: 6,
+              spaceBetween: 0,
             },
           }}
         >
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 w-full flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 w-full flex items-center pl-2 justify-start">
                   <img
-                    src="assets/mineral.png"
+                    src="assets/semua-kategori.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block  mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-start">
@@ -119,7 +132,31 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
+                  >
+                    Semua Kategori
+                  </Typography>
+                </div>
+              </div>
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="#">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
+                  <img
+                    src="assets/mineral.png"
+                    alt=""
+                    className="block  mb-4 h-[65px] w-1/2 lg:mb-0"
+                  />
+                </div>
+                <div className="col-span-1 flex items-center justify-start">
+                  <Typography
+                    style={{
+                      fontFamily: "'M PLUS Rounded 1c', sans-serif",
+                      fontWeight: 400,
+                    }}
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
                     Mineral
                   </Typography>
@@ -129,12 +166,12 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
                   <img
                     src="assets/coal.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block  mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-start">
@@ -143,9 +180,9 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
-                    Batubara
+                    Batu Bara
                   </Typography>
                 </div>
               </div>
@@ -153,12 +190,12 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
                   <img
                     src="assets/corn.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-start">
@@ -167,9 +204,9 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
-                    Horticurtular
+                    Horticultural
                   </Typography>
                 </div>
               </div>
@@ -177,12 +214,12 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
                   <img
-                    src="assets/Agriculture.png"
+                    src="assets/agriculture.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-start">
@@ -191,7 +228,7 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
                     Agriculture
                   </Typography>
@@ -201,21 +238,21 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-start">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
                   <img
                     src="assets/aquaculture.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="col-span-1 flex items-center justify-center">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
                     Aquaculture
                   </Typography>
@@ -225,12 +262,12 @@ export default function ProductPage() {
           </SwiperSlide>
           <SwiperSlide>
             <a href="#">
-              <div className="bg-gradient-to-t w-[200px] md:w-[180px] xl:w-[190px] mx-auto from-wpigreen-50 to-wpiblue-50 rounded-lg py-2 px-1 grid grid-cols-2 overflow-hidden text-center">
-                <div className="col-span-1 flex items-center justify-center">
+              <div className="bg-gradient-to-t w-[250px] sm:w-[300px] md:w-[215px] lg:w-[175px] xl:w-[192px] mx-auto md:mx-0  from-wpigreen-50 to-wpiblue-50 rounded-lg py-3 px-2 flex items-center justify-center overflow-hidden text-center">
+                <div className="col-span-1 flex items-center pl-2 justify-start">
                   <img
                     src="assets/semua-kategori.png"
                     alt=""
-                    className="block mx-auto mb-2 h-[60px] w-1/2 lg:mb-0"
+                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
                 <div className="col-span-1 flex items-center justify-center">
@@ -239,7 +276,7 @@ export default function ProductPage() {
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
                       fontWeight: 400,
                     }}
-                    className="text-white font-bold text-md md:text-sm lg:text-sm"
+                    className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
                     Semua Kategori
                   </Typography>
@@ -303,7 +340,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center  translate-x-[0%] xl:translate-x-[20%] mt-6">
+        <div className="flex justify-center items-center   mt-6">
           <MasterPagination />
         </div>
       </div>
