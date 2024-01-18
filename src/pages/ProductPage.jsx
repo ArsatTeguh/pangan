@@ -290,8 +290,8 @@ export default function ProductPage() {
       {/* Content */}
       <div className="container mx-auto pb-[80px]">
         <div className="md:col-span-2 px-6 pt-4 lg:pt-0 md:px-0">
-          <div className="container mx-auto grid grid-cols-1 pb-4">
-            <div className="flex justify-center items-center md:ml-[50px] lg:ml-[460px] lg:mr-[30px]">
+          <div className="container mx-auto grid grid-cols-1 pb-4 md:w-[80%] lg:w-full">
+            <div className="flex justify-center items-center md:ml-[0px] lg:ml-[460px] lg:mr-[30px]">
               <input
                 type="text"
                 placeholder="Cari Produk"
@@ -321,7 +321,7 @@ export default function ProductPage() {
           </div>
         </div>
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-          <div className="md:col-span-1  md:ml-7 px-8 md:px-0">
+          <div className="md:col-span-1  md:ml-7   px-8 md:px-0">
             <div>
               <MasterFilterCard />
             </div>

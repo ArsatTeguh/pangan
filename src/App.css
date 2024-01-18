@@ -16,9 +16,19 @@
     padding-right: 1.5rem !important;
   }
 }
+@media (min-width: 1140px) {
+  .filters {
+    width: 21rem !important;
+  }
+}
 @media (min-width: 1314px) {
   .product {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
+  }
+}
+@media (min-width: 1320px) {
+  .filters {
+    width: 24rem !important;
   }
 }

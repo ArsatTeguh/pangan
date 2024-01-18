@@ -43,7 +43,7 @@ export default function MasterFilterCard() {
   //return as JSX
 
   return (
-    <Card className="xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
+    <Card className=" filters xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
       {/* Section 1 */}
       <Accordion
         className=""
