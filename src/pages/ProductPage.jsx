@@ -62,8 +62,8 @@ export default function ProductPage() {
 
       {/* Kategori Produk */}
       <div
-        className="container max-w-[1260px]  product mx-auto md:py-0 md:px-6 
-      mt-4"
+        className="container max-w-[1260px] mx-auto md:py-0 md:px-6 xl:px-0 
+     md:items-center md:justify-left justify-center  mt-4"
       >
         <Typography
           style={{
@@ -112,7 +112,7 @@ export default function ProductPage() {
 
             1238: {
               slidesPerView: 6,
-              spaceBetween: 0,
+              spaceBetween: 5,
             },
           }}
         >
@@ -126,7 +126,7 @@ export default function ProductPage() {
                     className="block  mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -174,7 +174,7 @@ export default function ProductPage() {
                     className="block  mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -198,7 +198,7 @@ export default function ProductPage() {
                     className="block mb-4 h-[65px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -219,10 +219,10 @@ export default function ProductPage() {
                   <img
                     src="assets/agriculture.png"
                     alt=""
-                    className="block mb-4 h-[65px] w-1/2 lg:mb-0"
+                    className="block mx-auto mb-4 h-[80px] w-1/2 lg:mb-0"
                   />
                 </div>
-                <div className="col-span-1 flex items-center justify-start">
+                <div className="flex items-center justify-start">
                   <Typography
                     style={{
                       fontFamily: "'M PLUS Rounded 1c', sans-serif",
@@ -278,7 +278,7 @@ export default function ProductPage() {
                     }}
                     className="text-white font-bold text-lg md:text-base lg:text-base"
                   >
-                    Semua Kategori
+                    Agriculture
                   </Typography>
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function ProductPage() {
           </div>
         </div>
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-          <div className="md:col-span-1  md:ml-7 px-8 md:px-0">
+          <div className="md: md:ml-7 px-8 md:px-0">
             <div>
               <MasterFilterCard />
             </div>
@@ -340,7 +340,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center   mt-6">
+        <div className="flex justify-center items-center  mt-6">
           <MasterPagination />
         </div>
       </div>
