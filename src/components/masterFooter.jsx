@@ -20,13 +20,13 @@ const currentYear = new Date().getFullYear();
 
 export default function MasterFooter() {
   return (
-    <footer className="relative w-full pb-10 px-4 ">
+    <footer className="relative w-full pb-10  px-4 xl:px-0">
       <div className="logo flex items-center gap-4 pb-4">
         <img src={image} alt="logo" className="w-[40px] h-[40px]" />
         <p className="text-xl font-semibold">Warung Pangan Indonesia</p>
       </div>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-y-2 ">
-        <div className="flex flex-col xl:flex-row   xl:gap-8 gap-2 ">
+        <div className="flex flex-col lg:flex-row   lg:gap-8 gap-2 ">
           <p className="w-[60%]">
             GRAHA PPI, Jl. Abdul Muis No.8, Jakarta Pusat, DKI Jakarta, 10160,
             Indonesia <br /> warungpangan@ptppi.co.id
@@ -42,7 +42,7 @@ export default function MasterFooter() {
           </p>
         </div>
         <div className="flex flex-col gap-4  ">
-          <div className="flex flex-col  xl:flex-row  xl:gap-8 gap-2 ">
+          <div className="flex flex-col  lg:flex-row  lg:gap-8 gap-2 ">
             <p>
               <strong className="text-black/80  text-nowrap">
                 {' '}
