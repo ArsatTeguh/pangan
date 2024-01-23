@@ -1,37 +1,28 @@
-import React, {useState, useEffect} from "react";
-import MasterSidebar from "../components/masterSidebar";
-import { Button, Card, Typography } from "@material-tailwind/react";
-import MasterFooterAdmin from "../components/masterFooterAdmin";
-import MasterNavbarAdmin from "../components/masterNavbarAdmin";
-import MasterCatalog from "../components/masterCatalog";
-import { PlusCircleIcon } from "@heroicons/react/24/solid";
-import MasterNewsAdmin from "../components/masterNewsAdmin";
+import React, { useState, useEffect } from 'react';
+import MasterSidebar from '../components/masterSidebar';
+import { Button, Card, Typography } from '@material-tailwind/react';
+import MasterFooterAdmin from '../components/masterFooterAdmin';
+import MasterNavbarAdmin from '../components/masterNavbarAdmin';
+import { PlusCircleIcon } from '@heroicons/react/24/solid';
+import { FaAngleDown } from 'react-icons/fa6';
+import Wilayah from '../API/wilayah';
 
 export default function MasterCity() {
-  const TABLE_HEAD = ["Nomor", "Nama Kota", "Aksi"];
-
-  const TABLE_ROWS = [
-    {
-      id: 1,
-      cityName: "Surakarta",
-    },
-    {
-      id: 2,
-      cityName: "Singkawang",
-    },
-  ];
+  const TABLE_HEAD = ['Nomor', 'Nama Provinsi', 'Nama Kota', 'Aksi'];
   const [openSidebar, setOpenSidebar] = useState(window.innerWidth >= 640);
+  const [selectIdProvinsi, setSelectIdProvinsi] = useState(''); // id_provinsi untuk add dan edit city
+  const { provinsiAndCity } = Wilayah();
 
   useEffect(() => {
     const handleResize = () => {
       setOpenSidebar(window.innerWidth >= 640);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // Cleanup
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -40,7 +31,7 @@ export default function MasterCity() {
       {/* Sidebar */}
       <div
         className={`bg-white z-50 fixed top-0 h-full md:block transition-transform duration-200 ease-in-out ${
-          openSidebar ? "translate-x-0" : "-translate-x-full"
+          openSidebar ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <MasterSidebar />
@@ -58,7 +49,6 @@ export default function MasterCity() {
         openSidebar={openSidebar}
         setOpenSidebar={setOpenSidebar}
       />
-
       {/* Content Product */}
       <div className="flex-grow h-full ml-4 md:ml-80 pt-10 mr-4">
         <div className="grid md:grid-cols-4 gap-2 bg-white md:mr-6 mb-6 pt-6 pb-6 px-6  rounded-lg shadow-md ">
@@ -66,82 +56,107 @@ export default function MasterCity() {
             Kota
           </Typography>
           <div className=" pr-6 md:col-span-2 flex md:justify-end items-center ">
-          <a href="/master-tambah-kota">
-            <Button className="bg-wpigreen-50 flex gap-2 items-center">
-              <PlusCircleIcon className="h-[15px] w-auto" />
-              <p>Tambah Kota</p>
-            </Button>
+            <a href="/master-tambah-kota">
+              <Button className="bg-wpigreen-50 flex gap-2 items-center">
+                <PlusCircleIcon className="h-[15px] w-auto" />
+                <p>Tambah Kota</p>
+              </Button>
             </a>
           </div>
         </div>
 
         {/* Table */}
         <div className="bg-white mr-6 mb-6 pt-6 pb-6 pr-6 pl-6 rounded-lg shadow-md">
-        <Card className="h-full w-full overflow-y-scroll rounded-md">
-        <table className="w-full min-w-max table-auto text-left">
-          <thead>
-            <tr>
-              {TABLE_HEAD.map((head) => (
-                <th
-                  key={head}
-                  className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
-                >
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal leading-none opacity-70"
-                  >
-                    {head}
-                  </Typography>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {TABLE_ROWS.map(({ id, cityName}) => (
-              <tr key={id} className="even:bg-blue-gray-50/50">
-                <td className="p-4">
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {id}
-                  </Typography>
-                </td>
-                <td className="p-4">
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {cityName}
-                  </Typography>
-                </td>
-                <td className="p-4">
+          <Card className="h-full w-full overflow-y-scroll rounded-md">
+            <table className="w-full min-w-max table-auto text-left">
+              <thead>
+                <tr>
+                  {TABLE_HEAD.map((head) => (
+                    <th
+                      key={head}
+                      className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+                    >
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal leading-none opacity-70"
+                      >
+                        {head}
+                      </Typography>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {provinsiAndCity?.map((data) => (
+                  <tr key={data.nomor} className="even:bg-blue-gray-50/50">
+                    <td className="p-4">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {data.nomor}
+                      </Typography>
+                    </td>
+                    <td className="p-4">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {data.provinceName}
+                      </Typography>
+                    </td>
+                    <td className="p-4">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        <div className="relative">
+                          <select
+                            name="kota"
+                            className="w-full py-3 rounded-md border-[1px] border-black/25 px-2 appearance-none "
+                            id="kota"
+                            onChange={() => setSelectIdProvinsi(data.id)}
+                          >
+                            {data.cityName.map((city, index) => (
+                              <option value={data.id} key={index}>
+                                {city}
+                              </option>
+                            ))}
+                          </select>
+                          <span className="absolute top-[1.1rem] right-2">
+                            <FaAngleDown />
+                          </span>
+                        </div>
+                      </Typography>
+                    </td>
+                    <td className="">
                       <div className="">
                         <a href="/master-edit-kota">
-                        <button
-                          type="button"
-                          className="ml-2 mb-[-10px] bg-orange-500 text-white font-bold px-4 h-10 rounded-md"
-                        >
-                          <div className="flex justify-center items-center gap-3">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="w-6 h-6"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
-                              />
-                            </svg>
-                          </div>
-                        </button>
+                          <button
+                            type="button"
+                            className="ml-2 mb-[-10px] bg-orange-500 text-white font-bold px-4 h-10 rounded-md"
+                          >
+                            <div className="flex justify-center items-center gap-3">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                                />
+                              </svg>
+                            </div>
+                          </button>
                         </a>
                         <button
                           type="button"
