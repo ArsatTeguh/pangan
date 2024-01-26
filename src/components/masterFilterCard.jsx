@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-import { Select, Option, Input } from '@material-tailwind/react';
-import { Slider } from '@material-tailwind/react';
 import {
   Accordion,
-  AccordionHeader,
   AccordionBody,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
+  AccordionHeader,
   Button,
+  Card,
+  CardFooter,
   Checkbox,
+  Input,
   List,
   ListItem,
   ListItemPrefix,
+  Slider,
+  Typography,
 } from '@material-tailwind/react';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
+import React, { useState } from 'react';
+import { FaAngleDown } from 'react-icons/fa6';
 
 export default function MasterFilterCard() {
   const [section1Expanded, setSection1Expanded] = useState(false);
@@ -77,22 +75,26 @@ export default function MasterFilterCard() {
   };
 
   return (
-    <Card className="xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
+    <Card className=" filters xl:w-96 w-full border-2 border-gray-300 shadow-md p-4">
       {/* Section 1 */}
-      <Accordion open={section1Expanded} icon={<AccordionIcon open={section1Expanded} />}>
+      <Accordion
+        className=""
+        open={section1Expanded}
+        icon={<AccordionIcon open={section1Expanded} />}
+      >
         <AccordionHeader onClick={toggleSection1}>
           <Typography
             style={{
-                fontFamily: "'M PLUS Rounded 1c', sans-serif",
-                fontWeight: 800,
-              }}
-            color={section1Expanded ? "green" : "black"}
+              fontFamily: "'M PLUS Rounded 1c', sans-serif",
+              fontWeight: 800,
+            }}
+            color={section1Expanded ? 'green' : 'black'}
             className="text-left uppercase font-semibold"
           >
             Lokasi
           </Typography>
         </AccordionHeader>
-          <AccordionBody className="w-full">
+        <AccordionBody className="w-full">
             <div className="flex w-full h-full flex-col gap-6 relative">
               <div className="relative">
                 <select
@@ -136,7 +138,7 @@ export default function MasterFilterCard() {
               </div>
             </div>
           </AccordionBody>
-        </Accordion>
+      </Accordion>
 
       {/* Section 2 */}
       <Accordion
@@ -156,7 +158,7 @@ export default function MasterFilterCard() {
           </Typography>
         </AccordionHeader>
         <AccordionBody>
-          <List>
+        <List>
           <ListItem className="p-0">
               <label
                 htmlFor="vertical-list-mineral"
@@ -297,7 +299,10 @@ export default function MasterFilterCard() {
       </Accordion>
 
       {/* Section 3 */}
-      <Accordion open={section3Expanded} icon={<AccordionIcon open={section3Expanded} />}>
+      <Accordion
+        open={section3Expanded}
+        icon={<AccordionIcon open={section3Expanded} />}
+      >
         <AccordionHeader onClick={toggleSection3}>
           <Typography
             style={{

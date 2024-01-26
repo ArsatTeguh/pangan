@@ -32,6 +32,7 @@ import EditMasterProvince from "./pages/editMasterProvince";
 import AdminEditProfile from "./pages/AdminEditProfile";
 import AdminAddNews from "./pages/AdminAddNews";
 import Supplier from "./pages/Supplier";
+import DetailSupplier from "./pages/DetailSupplier";
 export default function App() {
   return (
     <Routes>
@@ -67,6 +68,7 @@ export default function App() {
       <Route path="/master-edit-provinsi" element={<EditMasterProvince />} />
       <Route path="/admin-edit-profil" element={<AdminEditProfile />} />
       <Route path="/admin-supplier" element={<Supplier />} />
+      <Route path="/admin-detail-supplier" element={<DetailSupplier />} />
     </Routes>
   );
 }
