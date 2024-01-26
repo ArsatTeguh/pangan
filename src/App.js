@@ -62,7 +62,7 @@ export default function App() {
       <Route path="/master-tambah-blog" element={<AddMasterBlog />} />
       <Route path="/master-tambah-kota" element={<AddMasterCity />} />
       <Route path="/master-tambah-provinsi" element={<AddMasterProvince />} />
-      <Route path="/master-edit-produk" element={<EditMasterProduct />} />
+      <Route path="/master-edit-produk/:id" element={<EditMasterProduct />} />
       <Route path="/master-edit-blog" element={<EditMasterBlog />} />
       <Route path="/master-edit-kota" element={<EditMasterCity />} />
       <Route path="/master-edit-provinsi" element={<EditMasterProvince />} />
